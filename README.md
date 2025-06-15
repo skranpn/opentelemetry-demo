@@ -1,3 +1,19 @@
+opentelemetry-demo + grafana alloy + grafana tempo
+
+- docker-compose.minimal.yaml を docker-compose.yaml に変更
+- grafana alloy, grafana tempo 追加
+- otel-collector, jaeger, opensearch 削除
+
+todo:
+- logs の設定 (Loki 導入 ?)
+  - deploy.resources.limits.memory: 1.1G が気になっている (大きい)
+  - 軽く動かせるものにしたい
+- otelcol-config.yml を config.alloy に変換
+- 不要なサービスの停止
+  - email, shipping, valkey-cart あたりはいらないかも ?
+
+---
+
 <!-- markdownlint-disable-next-line -->
 # <img src="https://opentelemetry.io/img/logos/opentelemetry-logo-nav.png" alt="OTel logo" width="45"> OpenTelemetry Demo
 
